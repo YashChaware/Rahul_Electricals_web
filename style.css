@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    width: 96vw;
+    padding: 2vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.brand > .logo{
+    flex: 2;
+}
+
+.brand{
+    flex: 1;
+    display: flex;    
+    margin: 1rem;
+    margin-left: -1rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+.card{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.card > .des > .title{
+    font-size: large;
+    font-weight: bold;
+}
+
+.card > svg{
+    margin: 1rem;
+}
+
+.nav{
+    width: 96%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    padding: 0.5rem;
+}
