@@ -1,23 +1,33 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial,sans-serif;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 .header{
-    width: 96vw;
-    padding: 2vw;
+    width: 100vw;
+    height:20vh;
+    background-color: white;
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.space{
+    height: 20vh;
 }
 
 .header > .top{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 15vh;
 }
 
 
@@ -26,39 +36,184 @@
 }
 
 .brand{
-    flex: 1;
+    flex: 2;
     display: flex;    
-    margin: 1rem;
-    margin-left: -1rem;
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    justify-content: flex-end;
-    align-items: flex-end;
+    margin: 1rem 0rem 1rem 0rem;
+    font-size: 2rem;
     font-weight: bold;
     color: blueviolet;
 }
 
 .card{
-    flex: 2;
+    flex: 1;
     display: flex;
     justify-content: center;
 }
 
+.card > .des > div{
+    font-size: small;
+}
+
 .card > .des > .title{
-    font-size: large;
+    font-size: 15px;
     font-weight: bold;
 }
+
+
 
 .card > svg{
     margin: 1rem;
 }
 
+
 .nav{
-    width: 96%;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     border: 1px solid black;
     border-left: none;
     border-right: none;
     padding: 0.5rem;
+}
+
+.slides{
+    display: flex;
+    height: 50vh;
+}
+
+.space{
+    height: 20vh;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 20vh;
+}
+
+.slide{
+    position: absolute;
+    z-index: -1;
+    transition: 1s;
+    animation: fade 1s;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: -1;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+@keyframes fade {
+    0%{ opacity: 0; }
+    100%{ opacity: 1; }
+}
+
+.slide_num{
+    position: absolute;
+    color: white;
+    top:0;
+}
+
+@keyframes rtl {
+    0%{ left: 100% }
+    100%{ left: 0% }
+}
+
+.info{
+    display: flex;
+    padding: 4rem;
+    min-height: 40vh;
+    gap: 2vh;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.info > .left > .title{
+    font-size: large;
+    font-weight: bold;
+}
+
+.info > .left > .des{
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    text-align: justify;
+}
+
+.info > .left > .des{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.info > .left{
+    flex: 1;
+}
+
+.info > .right{
+    flex: 1;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 5rem;
+}
+
+.products > .head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: red;
+    text-align: center;
+    gap: 2vh;
+}
+
+.head > .dash{
+    width: 20vw;
+    border: 1px solid black;
+}
+
+.head > .long{
+    width: 25vw;
+}
+
+.products > .list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4vw;
+}
+
+.list > div{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 8px;
+    border: 1px solid black;
 }
