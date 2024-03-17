@@ -211,9 +211,47 @@ body{
     gap: 4vw;
 }
 
-.list > div{
+.list > .pr_cards{
+    display: flex;
+    flex-direction: column;
     width: 20vw;
     height: 30vh;
     border-radius: 8px;
     border: 1px solid black;
+}
+
+.pr_cards > .top{
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+}
+
+.pr_cards > .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid grey;
+    background-color: orange;
+    border-radius: 0 0 8px 8px;
+    color: white;
+    height: 5vh;
+}
+
+.pr_cards > .top > img{
+    border-radius: 8px 8px 0 0;   
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    background-color: blueviolet;
+    color: white;
 }
