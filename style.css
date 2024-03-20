@@ -69,12 +69,14 @@ body{
 
 .nav{
     width: 100vw;
+    height: 10VH;
     display: flex;
+    justify-content: center;
+    align-items: center;
     justify-content: space-around;
     border: 1px solid black;
     border-left: none;
     border-right: none;
-    padding: 0.5rem;
 }
 
 .slides{
@@ -135,10 +137,6 @@ body{
     top:0;
 }
 
-@keyframes rtl {
-    0%{ left: 100% }
-    100%{ left: 0% }
-}
 
 .info{
     display: flex;
@@ -219,12 +217,19 @@ body{
     height: 30vh;
     border-radius: 8px;
     border: 1px solid black;
+    transition: 0.5s;
+}
+
+.list > .pr_cards:hover{
+    box-shadow: 2px 4px 32px grey;
+    width: 23vw;
+    height: 33vh;
 }
 
 .pr_cards > .top{
     display: flex;
     justify-content: center;
-    height: 25vh;
+    height: 83%;
 }
 
 .pr_cards > .bottom{
@@ -236,7 +241,7 @@ body{
     background-color: orange;
     border-radius: 0 0 8px 8px;
     color: white;
-    height: 5vh;
+    height: 17%;
 }
 
 .pr_cards > .top > img{
@@ -255,4 +260,25 @@ a{
     height: 5vh;
     background-color: blueviolet;
     color: white;
+}
+
+
+.nav > a{
+    height: 96%;
+    padding: 0 1rem 0 1rem;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav > a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.nav > a:hover{
+    background-color: whitesmoke;
+    color: blueviolet;
 }
