@@ -20,8 +20,14 @@ body{
     /* align-items: center; */
 }
 
-.space{
+.orangespace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
     height: 20vh;
+    width: 100vw;
+    background-color: rgb(156, 125, 210);
 }
 
 .header > .top{
@@ -169,7 +175,7 @@ body{
 }
 
 .info > .left{
-    flex: 1;
+    flex: 2;
 }
 
 .info > .right{
@@ -178,6 +184,8 @@ body{
 
 .products{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 5vh;
     padding: 5rem;
@@ -280,5 +288,54 @@ a{
 
 .nav > a:hover{
     background-color: whitesmoke;
+    border-radius: 7px;
     color: blueviolet;
+}
+
+.about-img{
+    display: flex;
+    flex-direction: column;
+    padding: 10vw 0 0 0 ;
+    width: 30vw;
+    /* height: 30vh; */
+    transition: 0.5s;
+}
+
+.infoimg{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 30vh;
+    transition: 0.5s;
+}
+
+.info > .left{
+    flex: 1;
+    
+}
+
+.info > .left > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.info > .left > div > h3 > big{
+    color: rgb(72, 71, 71);
+}
+
+.info > .left > div > P{
+    color: rgb(91, 89, 89);
+}
+
+.info > .right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info > .right > img{
+    width: 300px;
+    border-radius: 30%;
+    aspect-ratio: 1;
 }
