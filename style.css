@@ -427,7 +427,7 @@ a{
 
 .formarea{
     display: flex;
-    background-image: url('assets/form_bg.jpg');
+    background-image: url('/assets/form_bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
