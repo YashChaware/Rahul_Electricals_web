@@ -1,4 +1,4 @@
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -63,39 +63,60 @@
     <div class="orangespace">
         <div class="products">
             <div class="head">
-                <div style="color: white;">Control Desk</div>
+                <div style="color: white;">Enquiry Form<br/> (Customers)</div>
                 <div class="dash"></div>
                 <div class="dash long"></div>
             </div>
     </div>
     </div>
-     
-    <div class="pcc_img">
-        <div><img src="https://www.alfanar.com/assets/images/products/lv_systems_solutions/control-desk.jpg" width="600" "Control Desk " title="Control Desk"></div>
-        </div>
-        <div class="colour_space"></div>
-        <div class="info">
-            <div class="left">
-                <!-- <div class="title">Please fill below enquiry form, our support staff / sales team <br> will contact you soon.</div> -->
-             <div>
-                 <h2><big>Control Desk panel</big></h2></br>Automatic Power Factor Control Panels are predominantly used for sustainment of Power Factor as per State Electricity Board. Power Factor is defined as ratio of active power to apparent power and it is mainly a key factor in measuring electrical consumption.APFC panels help reduce Reactive Power and Apparent Power Demand.These panels also help to avoid Power Factor Surcharges & Maximum Demand Penalties. It reduces the risk of Operational Issues and Power Loss.<p>
+    <p></p>
+        <div class="formarea">
+                <div class="formtitle">Please fill below enquiry form, our support staff / sales team  will contact you soon.</div>
+                <div class="des">
+                    <div class="form">
 
-                 </p>
-             </div>
-         </br>
-             
-         </br>
-         <div class="right">
-          
+                    <form>
+                        <form action="process_form.php" method="POST">
+
+                        <div class="inputS">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="inputS">
+                            <label for="company_name">Company Name</label>
+                            <input type="text" name="company_name" required>
+                        </div>
+                        <div class="inputS">
+                            <label for="email">Email ID</label>
+                            <input type="text" name="email" required>
+                        </div>
+                        <div class="inputS">
+                            <label for="contact">Contact Number</label>
+                            <input type="number" name="contact" required>
+                        </div>
+                        <div class="inputS">
+                            <label for="address">Address</label>
+                            <input type="text" name="address"required>
+                        </div>
+                        <div class="inputS">
+                            <label for="requirement">Requirement / Enquiry</label>
+                            <textarea type="text" name="requirement"></textarea>
+                        </div>
+                        <div class="inputS">
+                            <div class="submit">Submit</div>
+                        </div>
+                    </div>
+                    </form>
+                    </div>
+            </div>
         </div>
-    </div></div>
-    <div class="footer">
-        <div>Privacy Policy | Copyright &copy2024</div>
+        <div class="footer">
+            <div>Privacy Policy | Copyright &copy2024</div>
+        </div>
     </div>
-</div>
-<button onclick="scrollToTop()" id="goToTopBtn" title="Go to top">&#x1F51D;</button>
-</div>
-
-<script src="script.js"></script>
-    </body>
-    </html>
+    <button onclick="scrollToTop()" id="goToTopBtn" title="Go to top">&#x1F51D;</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

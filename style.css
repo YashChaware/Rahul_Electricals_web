@@ -37,7 +37,6 @@ body{
     height: 15vh;
 }
 
-
 .brand > .logo{
     flex: 2;
 }
@@ -66,12 +65,9 @@ body{
     font-weight: bold;
 }
 
-
-
 .card > svg{
     margin: 1rem;
 }
-
 
 .nav{
     width: 100vw;
@@ -84,6 +80,23 @@ body{
     border-left: none;
     border-right: none;
     
+}
+
+.nav > a{
+    height: 96%;
+    padding: 0 1rem 0 1rem;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+.nav > a:hover{
+    background-color: whitesmoke;
+    border-radius: 7px;
+    color: blueviolet;
 }
 
 .slides{
@@ -144,10 +157,9 @@ body{
     top:0;
 }
 
-
 .info{
     display: flex;
-    padding: 4rem;
+    padding: 1rem;
     min-height: 40vh;
     gap: 2vh;
 }
@@ -167,9 +179,6 @@ body{
     letter-spacing: 2px;
     word-spacing: 4px;
     text-align: justify;
-}
-
-.info > .left > .des{
     display: flex;
     flex-direction: column;
     gap: 2vh;
@@ -257,7 +266,6 @@ body{
     border-radius: 8px 8px 0 0;   
 }
 
-
 a{
     text-decoration: none;
 }
@@ -269,27 +277,6 @@ a{
     height: 5vh;
     background-color: blueviolet;
     color: white;
-}
-
-
-.nav > a{
-    height: 96%;
-    padding: 0 1rem 0 1rem;
-    transition: 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-}
-
-
-
-
-.nav > a:hover{
-    background-color: whitesmoke;
-    border-radius: 7px;
-    color: blueviolet;
 }
 
 .about-img{
@@ -311,12 +298,21 @@ a{
 
 .info > .left{
     flex: 1;
-    
 }
 
 .info > .left > div{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info > .center > div{
+    display: flex;
+    flex-direction: column;
+}
+.center{
+    flex: 1;
 }
 
 .info > .left > div > h3 > big{
@@ -348,18 +344,14 @@ a{
     text-decoration: none;
     display: block;
     border-radius: 7px;
-
-   
   }
 
   .dropdown-content a:hover {background-color: whitesmoke;
     border-radius: 7px;
     color: blueviolet;background-color: #ddd;}
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: whitesmoke;
     border-radius: 7px;
@@ -376,7 +368,98 @@ a{
 }
 
 .colour_space{
+    display: flex;
     height: 7vh;
     background-color:rgb(156, 125, 210);
     border-radius: 10px;
 }
+
+.form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: white;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    margin: 1rem;
+    padding: 0.5vw;
+    gap: 1rem;
+}
+
+.form > form >  .inputS{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.form > form > .inputS > label{
+    margin-bottom: 5px;
+    font-size: large;
+    font-weight: bold;
+    width: 100%;
+}
+
+.form > form > .inputS > input,
+.form > form > .inputS > textarea{
+    width: 20vw;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    font-size: large;
+    color: black;
+}
+
+.form > form > .inputS > .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    width: 10vw;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.formarea{
+    display: flex;
+    background-image: url('/assets/form_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formtitle{
+     color: white; font-size: xx-large; text-align: center; width: 100%;
+}
+
+/* Styles for the Go to Top button */
+#goToTopBtn {
+    display: none; /* Hide the button by default */
+    position: fixed; /* Fixed position on the screen */
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    z-index: 99; /* Ensure it stays on top of other elements */
+    border: none; /* Remove default button styles */
+    outline: none; /* Remove default button styles */
+    background-color: gainsboro; /* Button background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Show pointer cursor on hover */
+    padding: 15px; /* Padding inside the button */
+    border-radius: 20%; /* Make it a circle */
+    font-size: x-large;
+  }
+  
+  #goToTopBtn:hover {
+    background-color:gray; /* Darker color on hover */
+  }
+  
