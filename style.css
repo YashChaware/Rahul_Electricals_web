@@ -460,3 +460,25 @@ a{
     background-color:gray ;/* Darker color on hover */
     
   }
+  .footer {
+    background-color: #333; /* Background color of the footer */
+    color: #fff; /* Text color of the footer */
+    padding: 30px 20px; /* Padding around the content inside the footer */
+    text-align: center; /* Align text to the center */
+}
+.footer h3 {
+    color: #fff; /* Color of the section title */
+    margin-bottom: 15px; /* Space below the section title */
+}
+.footer a {
+    color: #fff; /* Footer link color */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 10px; /* Add margin between links */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+.footer .copyright {
+    margin-top: 10px; /* Add space between links and copyright */
+}
