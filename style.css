@@ -97,6 +97,10 @@ body{
     background-color: whitesmoke;
     border-radius: 7px;
     color: blueviolet;
+    flex-grow: .08;
+    
+ 
+    
 }
 
 .slides{
@@ -270,15 +274,6 @@ a{
     text-decoration: none;
 }
 
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5vh;
-    background-color: blueviolet;
-    color: white;
-}
-
 .about-img{
     display: flex;
     flex-direction: column;
@@ -348,14 +343,16 @@ a{
 
   .dropdown-content a:hover {background-color: whitesmoke;
     border-radius: 7px;
+    flex-grow: 0.8;
     color: blueviolet;background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {display: block;flex-grow: 0.8;}
 
 .dropdown:hover .dropbtn {
     background-color: whitesmoke;
     border-radius: 7px;
     color: blueviolet;
+    flex-grow: 0.8;
 }
 
 .pcc_img{
@@ -427,7 +424,7 @@ a{
 
 .formarea{
     display: flex;
-    background-image: url('/assets/form_bg.jpg');
+    background-image: url('assets/form_bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -460,6 +457,33 @@ a{
   }
   
   #goToTopBtn:hover {
-    background-color:gray; /* Darker color on hover */
+    background-color:gray ;/* Darker color on hover */
+    
   }
-  
+
+  .footer {
+    background-color: #333; /* Background color of the footer */
+    color: #fff; /* Text color of the footer */
+    padding: 30px 20px; /* Padding around the content inside the footer */
+    text-align: center; /* Align text to the center */
+}
+
+.footer  h3 {
+    color: #fff; /* Color of the section title */
+    margin-bottom: 15px; /* Space below the section title */
+}
+
+.footer a {
+    color: #fff; /* Footer link color */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 10px; /* Add margin between links */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+.footer .copyright {
+    margin-top: 10px; /* Add space between links and copyright */
+}
+

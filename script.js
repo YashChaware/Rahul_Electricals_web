@@ -62,3 +62,4 @@ function addCardClickListeners() {
 
 // Call the function to add click event listeners to product cards
 addCardClickListeners();
+
