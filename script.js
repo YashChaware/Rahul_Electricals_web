@@ -63,3 +63,17 @@ function addCardClickListeners() {
 // Call the function to add click event listeners to product cards
 addCardClickListeners();
 
+
+document.getElementById("Formsubmit");
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwIJqTx7-IVq8ZUG5xB8QlX2qrXgQawKzx1JxiEuuxCCSt-WAXmtS0Yj7i95oMeODb5/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg=document.getElementById("msg")
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        alert("Form submitted successfully");
+        form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
