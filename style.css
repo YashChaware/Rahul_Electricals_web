@@ -61,7 +61,7 @@ body{
 }
 
 .card > .des > .title{
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: bold;
 }
 
@@ -76,7 +76,7 @@ body{
     justify-content: center;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid black;
+    border: 0.0625rem solid black;
     border-left: none;
     border-right: none;
     
@@ -95,7 +95,7 @@ body{
 
 .nav > a:hover{
     background-color: whitesmoke;
-    border-radius: 7px;
+    border-radius: 0.4375rem;
     color: blueviolet;
     flex-grow: .08;
     
@@ -130,20 +130,20 @@ body{
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
-    margin-top: -22px;
+    padding: 1rem;
+    margin-top: -1.375rem;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 0.1875rem 0.1875rem 0;
     user-select: none;
     z-index: 1;
   }
 
   .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 0.1875rem 0 0 0.1875rem;
   }
 
   .prev:hover, .next:hover {
@@ -180,8 +180,8 @@ body{
 }
 
 .info > .left > .des{
-    letter-spacing: 2px;
-    word-spacing: 4px;
+    letter-spacing: 0.125rem;
+    word-spacing: 0.25rem;
     text-align: justify;
     display: flex;
     flex-direction: column;
@@ -218,7 +218,7 @@ body{
 
 .head > .dash{
     width: 20vw;
-    border: 1px solid black;
+    border: 0.0625rem solid black;
 }
 
 .head > .long{
@@ -237,13 +237,13 @@ body{
     flex-direction: column;
     width: 20vw;
     height: 30vh;
-    border-radius: 8px;
-    border: 1px solid black;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid black;
     transition: 0.5s;
 }
 
 .list > .pr_cards:hover{
-    box-shadow: 2px 4px 32px grey;
+    box-shadow: 0.125rem 0.25rem 2rem grey;
     width: 23vw;
     height: 33vh;
 }
@@ -259,15 +259,15 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-top: 1px solid grey;
+    border-top: 0.0625rem solid grey;
     background-color: orange;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 0.5rem 0.5rem;
     color: white;
     height: 17%;
 }
 
 .pr_cards > .top > img{
-    border-radius: 8px 8px 0 0;   
+    border-radius: 0.5rem 0.5rem 0 0;   
 }
 
 a{
@@ -327,22 +327,22 @@ a{
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 10rem;
+    box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
     z-index: 1;
-    border-radius: 7px;
+    border-radius: 0.4375rem;
   }
 
   .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
     text-decoration: none;
     display: block;
-    border-radius: 7px;
+    border-radius: 0.4375rem;
   }
 
   .dropdown-content a:hover {background-color: whitesmoke;
-    border-radius: 7px;
+    border-radius: 0.4375rem;
     flex-grow: 0.8;
     color: blueviolet;background-color: #ddd;}
 
@@ -350,7 +350,7 @@ a{
 
 .dropdown:hover .dropbtn {
     background-color: whitesmoke;
-    border-radius: 7px;
+    border-radius: 0.4375rem;
     color: blueviolet;
     flex-grow: 0.8;
 }
@@ -368,7 +368,7 @@ a{
     display: flex;
     height: 7vh;
     background-color:rgb(156, 125, 210);
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .form{
@@ -377,8 +377,8 @@ a{
     align-items: center;
     width: 100%;
     color: white;
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(1.5625rem);
+    -webkit-backdrop-filter: blur(1.5625rem);
     margin: 1rem;
     padding: 0.5vw;
     gap: 1rem;
@@ -393,7 +393,7 @@ a{
 }
 
 .form > form > .inputS > label{
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
     font-size: large;
     font-weight: bold;
     width: 100%;
@@ -402,10 +402,10 @@ a{
 .form > form > .inputS > input,
 .form > form > .inputS > textarea{
     width: 20vw;
-    height: 20px;
-    padding: 10px;
-    border: 1px solid grey;
-    border-radius: 7px;
+    height: 1.25rem;
+    padding: 0.625rem;
+    border: 0.0625rem solid grey;
+    border-radius: 0.4375rem;
     font-size: large;
     color: black;
 }
@@ -415,9 +415,9 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 40px;
+    height: 2.5rem;
     width: 10vw;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     background-color: blueviolet;
     color: white;
 }
@@ -443,15 +443,15 @@ a{
 #goToTopBtn {
     display: none; /* Hide the button by default */
     position: fixed; /* Fixed position on the screen */
-    bottom: 20px; /* Position from the bottom */
-    right: 20px; /* Position from the right */
+    bottom: 1.25rem; /* Position from the bottom */
+    right: 1.25rem; /* Position from the right */
     z-index: 99; /* Ensure it stays on top of other elements */
     border: none; /* Remove default button styles */
     outline: none; /* Remove default button styles */
     background-color: gainsboro; /* Button background color */
     color: white; /* Text color */
     cursor: pointer; /* Show pointer cursor on hover */
-    padding: 15px; /* Padding inside the button */
+    padding: 0.9375rem; /* Padding inside the button */
     border-radius: 20%; /* Make it a circle */
     font-size: x-large;
   }
@@ -463,22 +463,22 @@ a{
   .footer {
     background-color: #333; /* Background color of the footer */
     color: #fff; /* Text color of the footer */
-    padding: 30px 20px; /* Padding around the content inside the footer */
+    padding: 1.875rem 1.25rem; /* Padding around the content inside the footer */
     text-align: center; /* Align text to the center */
 }
 .footer h3 {
     color: #fff; /* Color of the section title */
-    margin-bottom: 15px; /* Space below the section title */
+    margin-bottom: 0.9375rem; /* Space below the section title */
 }
 .footer a {
     color: #fff; /* Footer link color */
     text-decoration: none; /* Remove underline from links */
-    margin: 0 10px; /* Add margin between links */
+    margin: 0 0.625rem; /* Add margin between links */
 }
 
 .footer a:hover {
     text-decoration: underline; /* Underline links on hover */
 }
 .footer .copyright {
-    margin-top: 10px; /* Add space between links and copyright */
+    margin-top: 0.625rem; /* Add space between links and copyright */
 }
