@@ -244,8 +244,8 @@ body{
 
 .list > .pr_cards:hover{
     box-shadow: 0.125rem 0.25rem 2rem grey;
-    width: 23vw;
-    height: 33vh;
+    width: 21vw;
+    height: 31vh;
 }
 
 .pr_cards > .top{

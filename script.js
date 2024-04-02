@@ -64,16 +64,69 @@ function addCardClickListeners() {
 addCardClickListeners();
 
 
-document.getElementById("Formsubmit");
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwIJqTx7-IVq8ZUG5xB8QlX2qrXgQawKzx1JxiEuuxCCSt-WAXmtS0Yj7i95oMeODb5/exec'
-const form = document.forms['submit-to-google-sheet']
-const msg=document.getElementById("msg")
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwIJqTx7-IVq8ZUG5xB8QlX2qrXgQawKzx1JxiEuuxCCSt-WAXmtS0Yj7i95oMeODb5/exec';
+const form = document.forms['submit-to-google-sheet'];
+
 form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => {
-        alert("Form submitted successfully");
-        form.reset()
+    e.preventDefault(); // Prevent default form submission
+
+    // Validate form before submission
+    if (validateForm()) {
+        // If validation passes, send form data
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            alert("Form submitted successfully");
+            form.reset(); // Reset the form after successful submission
         })
-        .catch(error => console.error('Error!', error.message))
-    })
+        .catch(error => console.error('Error!', error.message));
+    }
+});
+
+function validateForm() {
+    var name = document.forms["submit-to-google-sheet"]["Name"].value;
+    var companyName = document.forms["submit-to-google-sheet"]["Company_Name"].value;
+    var email = document.forms["submit-to-google-sheet"]["Email"].value;
+    var contactNumber = document.forms["submit-to-google-sheet"]["Contact_Number"].value;
+    var address = document.forms["submit-to-google-sheet"]["Address"].value;
+    var requirement = document.forms["submit-to-google-sheet"]["Requirement"].value;
+
+    // Check if name is empty
+    if (name.trim() === "") {
+        alert("Please enter your name.");
+        return false;
+    }
+
+    // Check if company name is empty
+    if (companyName.trim() === "") {
+        alert("Please enter your company name.");
+        return false;
+    }
+
+    // Check if email is empty and valid
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    // Check if contact number is empty and exactly 10 digits
+    if (contactNumber.trim() === "" || contactNumber.length !== 10 || isNaN(contactNumber)) {
+        alert("Please enter a valid 10-digit contact number.");
+        return false;
+    }
+
+    // Check if address is empty
+    if (address.trim() === "") {
+        alert("Please enter your address.");
+        return false;
+    }
+
+    // Check if requirement is empty
+    if (requirement.trim() === "") {
+        alert("Please enter your requirement/enquiry.");
+        return false;
+    }
+
+    // All validations passed
+    return true;
+}
