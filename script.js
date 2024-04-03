@@ -126,7 +126,13 @@ function validateForm() {
         alert("Please enter your requirement/enquiry.");
         return false;
     }
-
     // All validations passed
     return true;
 }
+
+window.onload = function() {
+    var scrollPoint = document.getElementById("scrollPoint");
+    if (scrollPoint) {
+        scrollPoint.scrollIntoView();
+    }
+};
