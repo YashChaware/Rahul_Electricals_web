@@ -81,31 +81,32 @@
 
                         <div class="inputS">
                             <label for="name">Name</label>
-                            <input type="text" name="Name" placeholder="Enter Name" required>
+                            <input type="text" name="Name" placeholder="Enter Name">
                         </div>
                         <div class="inputS">
                             <label for="company_name">Company Name</label>
-                            <input type="text" name="Company_Name" placeholder="Enter Company Name" required>
+                            <input type="text" name="Company_Name" placeholder="Enter Company Name">
                         </div>
                         <div class="inputS">
                             <label for="email">Email ID</label>
-                            <input type="email" name="Email" placeholder="Enter Email ID" required>
+                            <input type="email" name="Email" placeholder="Enter Email ID">
                         </div>
                         <div class="inputS">
                             <label for="contact">Contact Number</label>
-                            <input type="tel" name="Contact_Number"  placeholder="Enter Contact number" required >
+                            <input type="tel" name="Contact_Number"  placeholder="Enter Contact number" >
                         </div>
                         <div class="inputS">
                             <label for="address">Address</label>
-                            <input type="text" name="Address" placeholder="Enter Address" required>
+                            <input type="text" name="Address" placeholder="Enter Address">
                         </div>
                         <div class="inputS">
                             <label for="requirement">Requirement / Enquiry</label>
-                            <textarea name="Requirement" placeholder="Enter Requirement/Enquiry" required></textarea>
+                            <textarea name="Requirement" placeholder="Enter Requirement/Enquiry"></textarea>
                         </div>
                         <div class="inputS">
-                            <button type="submit" id="Formsubmit" class="submit" name="btn-signup">
-                                <span class="glyphicon glyphicon-log-in">Submit</buttton>
+                            <button type="submit" id="Formsubmit" class="submit" name="btn-signup" onclick="showLoadingScreen()">
+                                <span class="glyphicon glyphicon-log-in">Submit</span>
+                            </button>
                         </div>
                     </div>
                     </form>
@@ -132,5 +133,11 @@
     </div>
     
     <script src="script.js"></script>
+    
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+    
 </body>
 </html>

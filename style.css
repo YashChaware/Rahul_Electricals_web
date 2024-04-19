@@ -482,3 +482,45 @@ a{
 .footer .copyright {
     margin-top: 0.625rem; /* Add space between links and copyright */
 }
+
+/* Styling for the loading screen */
+.loading-screen {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white background */
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1); /* light border */
+    border-top: 4px solid #3498db; /* blue border on top */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* spinning animation */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px; /* center vertically */
+    margin-left: -25px; /* center horizontally */
+}
+
+.loading-text {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #333; /* dark text color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 30px; /* adjust spacing from spinner */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -63,22 +63,42 @@ function addCardClickListeners() {
 // Call the function to add click event listeners to product cards
 addCardClickListeners();
 
+// Function to show the loading screen
+function showLoadingScreen() {
+    document.getElementById('loadingScreen').style.display = 'block';
+}
+
+// Function to hide the loading screen
+function hideLoadingScreen() {
+    document.getElementById('loadingScreen').style.display = 'none';
+}
+
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwIJqTx7-IVq8ZUG5xB8QlX2qrXgQawKzx1JxiEuuxCCSt-WAXmtS0Yj7i95oMeODb5/exec';
 const form = document.forms['submit-to-google-sheet'];
 
+// Add event listener to the form submission
 form.addEventListener('submit', e => {
     e.preventDefault(); // Prevent default form submission
+
+    // Show loading screen when form is submitted
+    showLoadingScreen();
 
     // Validate form before submission
     if (validateForm()) {
         // If validation passes, send form data
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
+            hideLoadingScreen(); // Hide loading screen after form submission
             alert("Form submitted successfully");
             form.reset(); // Reset the form after successful submission
         })
-        .catch(error => console.error('Error!', error.message));
+        .catch(error => {
+            hideLoadingScreen(); // Hide loading screen in case of error
+            console.error('Error!', error.message);
+        });
+    } else {
+        hideLoadingScreen(); // Hide loading screen if form validation fails
     }
 });
 
