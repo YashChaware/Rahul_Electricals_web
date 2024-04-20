@@ -514,8 +514,8 @@ a{
     font-size: 20px;
     color: #333; /* dark text color */
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 53%;
+    left: 50.5%;
     transform: translate(-50%, -50%);
     margin-top: 30px; /* adjust spacing from spinner */
 }
