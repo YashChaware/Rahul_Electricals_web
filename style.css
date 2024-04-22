@@ -524,3 +524,31 @@ a{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+#name{
+    color: rgb(162, 105, 216);
+    margin-top: 1vh;
+}
+#companyName{
+    color: rgb(162, 105, 216);
+    margin-top: 1vh;
+}
+#email{
+    color: rgb(162, 105, 216);
+    margin-top: 1vh;
+}
+#contactNumber{
+    color: rgb(162, 105, 216);
+    margin-top: 1vh;
+}
+#address{
+    color: rgb(162, 105, 216);
+    margin-top: 1vh;
+}
+#requirement{
+    color: rgb(162, 105, 216);
+    margin-top: 1vh;
+}
+.compulsary{
+    color: rgb(162, 105, 216);
+}
