@@ -76,11 +76,31 @@ function hideLoadingScreen() {
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwIJqTx7-IVq8ZUG5xB8QlX2qrXgQawKzx1JxiEuuxCCSt-WAXmtS0Yj7i95oMeODb5/exec';
 const form = document.forms['submit-to-google-sheet'];
+const inputs = form.querySelectorAll('input');
+
+inputs.forEach((input, index) => {
+    input.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent default form submission
+
+            if (index < inputs.length - 1) {
+                // Focus on the next input field
+                inputs[index + 1].focus();
+            } else {
+                // Submit the form
+                submitForm(false);
+            }
+        }
+    });
+});
 
 // Add event listener to the form submission
-form.addEventListener('submit', e => {
-    e.preventDefault(); // Prevent default form submission
 
+function submitForm(e) {
+    if(e){
+        e.preventDefault(); // Prevent default form submission
+    }
+    
     // Show loading screen when form is submitted
     showLoadingScreen();
 
@@ -100,7 +120,9 @@ form.addEventListener('submit', e => {
     } else {
         hideLoadingScreen(); // Hide loading screen if form validation fails
     }
-});
+}
+
+form.addEventListener('submit', submitForm);
 
 function validateForm() {
     var name = document.forms["submit-to-google-sheet"]["Name"].value;
