@@ -377,6 +377,7 @@ a{
     align-items: center;
     width: 100%;
     color: white;
+    border-radius: 5px;
     backdrop-filter: blur(1.5625rem);
     -webkit-backdrop-filter: blur(1.5625rem);
     margin: 1rem;
@@ -567,6 +568,7 @@ a{
         overflow-x: hidden;
         overflow-wrap:normal;
     }
+
     .form {
          flex-direction: column;
          align-items: center;
@@ -746,13 +748,15 @@ a{
      }
 
      .footer{
-        width: 95%;
+        width: 94vw;
+        padding: 1rem 3vw;
      }
 
      #menu{
         display: flex;
         flex-direction: column;
         gap: 5px;
+        margin: 1rem;
      }
 
      #menu > div{
@@ -772,5 +776,32 @@ a{
 
      .change .bar3{
         transform: translate(0, -3px) rotate(45deg);
+     }
+
+     .formarea{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+     }
+
+     .formarea > .des{
+        display: flex;
+        width: 80vw;
+     }
+
+     .form > form {
+        width: max-content;
+
+     }
+
+     .form > form >  .inputS > input{
+        width: 100%;
+     }
+
+     .form > form > .inputS > label{
+        text-align: center;
      }
  }
