@@ -804,4 +804,11 @@ a{
      .form > form > .inputS > label{
         text-align: center;
      }
+
+     .form > form > .inputS > .submit{
+        text-align: center;
+        border: none;
+        width: 50%;
+        font-size: large;
+     }
  }
