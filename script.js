@@ -208,7 +208,30 @@ function validateForm() {
   }
   // All validations passed
   return true;
-}
+};
+
+var menu = document.getElementById("menu");
+var nav = document.getElementById("nav");
+
+menu.addEventListener('click',(event) =>{
+    menu.classList.toggle("change")
+    if (nav.style.display === "none"){
+        if(menu.classList.contains("change")){
+            nav.style.display = "flex";
+        }
+    }else{
+        if(menu.classList.contains("change")){
+            nav.style.display = "flex"
+        }else{
+            nav.style.display = "none"
+        }
+        
+    }
+    console.log("clicked "+event+menu)
+});
+
+
+
 
 window.onload = function () {
   var scrollPoint = document.getElementById("scrollPoint");

@@ -399,8 +399,7 @@ a{
     width: 100%;
 }
 
-.form > form > .inputS > input,
-.form > form > .inputS > textarea{
+.form > form > .inputS > input{
     width: 20vw;
     height: 1.25rem;
     padding: 0.625rem;
@@ -427,7 +426,7 @@ a{
     background-image: url('assets/form_bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size:100%;
     object-fit: cover;
     justify-content: center;
     align-items: center;
@@ -552,7 +551,20 @@ a{
 .compulsary{
     color: rgb(162, 105, 216);
 }
+
+.nav{
+    display: none;
+}
+
+.change{
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+        overflow-wrap:normal;
+    }
     .form {
          flex-direction: column;
          align-items: center;
@@ -566,6 +578,7 @@ a{
 
     .formarea {
         background-size:auto;
+       
       }
  
     .pcc_img {
@@ -620,10 +633,16 @@ a{
          flex: 1;
          justify-content: center;
      }
-     .about-img img{
+     .about-img {
+        display: flex;
         justify-content: center;
-        width:150%;
-     }
+        align-items: center;
+        width:100%;
+    }
+    .about-img > img {
+        width: 100%;
+        height: auto;
+    }
  
     .slide {
          height: 30vh;
@@ -637,6 +656,7 @@ a{
     .card {
          flex: 1 1 100%;
          height: auto;
+         display: none;
      }
  
     .card >.des {
@@ -665,25 +685,38 @@ a{
      }
  
     .header {
-         height: 15vh;
+         height: max-content;
+         width: 100%;
+         display: flex;
+         flex-direction: column;
          padding: 0 1rem;
          justify-content: space-between;
      }
  
-    .header.top {
-         height: 5vh;
+    .header .top {
+        justify-content: center;
+         
      }
  
     .header.brand {
          font-size: 1.5rem;
      }
  
-    .header.nav {
+    .header .nav {
+        display: none;
          height: 10vh;
          position: absolute;
-         bottom: 0;
-         width: 100%;
+         height: min-content;
+         width: min-content;
+         border: 1px solid #cccccc;
+         border-radius: 13px;
+         padding: 1rem 0;
+         gap: 8px;
+         top: 10rem;
+         left: 4%;
+         margin: auto;
          justify-content: center;
+         background-color: #ffffff;
      }
  
     .header.nav a {
@@ -707,5 +740,33 @@ a{
      }
      .list{
         flex-direction: column;
+     }
+
+     .footer{
+        width: 95%;
+     }
+
+     #menu{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+     }
+
+     #menu > div{
+        width: 1.4rem;
+        border: 1px solid black;
+        transition: 1s;
+     }
+
+     .change .bar1{
+        transform: translate(0, 3px) rotate(-45deg);
+     }
+
+     .change .bar2{
+        display: none;
+     }
+
+     .change .bar3{
+        transform: translate(0, -3px) rotate(45deg);
      }
  }
