@@ -554,10 +554,12 @@ a{
 
 .nav{
     display: none;
+    transition: 1s;
 }
 
 .change{
     display: none;
+    transition: 1s;
 }
 
 @media only screen and (max-width: 600px) {
@@ -713,7 +715,7 @@ a{
          padding: 1rem 0;
          gap: 8px;
          top: 10rem;
-         left: 4%;
+         left: 8%;
          margin: auto;
          justify-content: center;
          background-color: #ffffff;
@@ -756,6 +758,7 @@ a{
         width: 1.4rem;
         border: 1px solid black;
         transition: 1s;
+        animation: 1s ease-in-out;
      }
 
      .change .bar1{
