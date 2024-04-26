@@ -360,8 +360,17 @@ a{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     
+}
+
+.pcc_img > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 
 .colour_space{
@@ -584,11 +593,7 @@ a{
         background-size:auto;
        
       }
- 
-    .pcc_img {
-         height: auto;
-     }
- 
+
     .infoimg {
          width: 60vw;
          height: auto;
@@ -646,6 +651,18 @@ a{
     .about-img > img {
         width: 100%;
         height: auto;
+    }
+
+    .pcc_img{
+        width: 100%;
+        object-fit:contain;
+    }
+
+    .pcc_img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
  
     .slide {

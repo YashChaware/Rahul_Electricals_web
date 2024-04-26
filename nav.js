@@ -24,3 +24,8 @@ window.addEventListener('resize',()=>{
         nav.style.display = "none";
     }
 });
+
+document.addEventListener("scroll", (event) => {
+    menu.classList.remove("change");
+    nav.style.display = "none";
+});
