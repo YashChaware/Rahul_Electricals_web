@@ -17,3 +17,9 @@ menu.addEventListener('click',(event) =>{
     }
     console.log("clicked "+event+menu)
 });
+
+// while(1)
+// {
+//     if(window.innerWidth > 600){
+//         nav.style.display = "flex";
+//     }
