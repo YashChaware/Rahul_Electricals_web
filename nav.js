@@ -1,6 +1,10 @@
 var menu = document.getElementById("menu");
 var nav = document.getElementById("nav");
-nav.style.display = "flex";
+if(window.innerWidth < 600){
+    nav.style.display = "none"
+}else{
+    nav.style.display = "flex";
+}
 menu.addEventListener('click',(event) =>{
     menu.classList.toggle("change")
     if (nav.style.display === "none"){
