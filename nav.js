@@ -1,6 +1,6 @@
 var menu = document.getElementById("menu");
 var nav = document.getElementById("nav");
-
+nav.style.display = "flex";
 menu.addEventListener('click',(event) =>{
     menu.classList.toggle("change")
     if (nav.style.display === "none"){
@@ -15,11 +15,12 @@ menu.addEventListener('click',(event) =>{
         }
         
     }
-    console.log("clicked "+event+menu)
 });
 
-// while(1)
-// {
-//     if(window.innerWidth > 600){
-//         nav.style.display = "flex";
-//     }
+window.addEventListener('resize',()=>{
+    if(window.innerWidth > 600){
+        nav.style.display = "flex";
+    }else{
+        nav.style.display = "none";
+    }
+});
