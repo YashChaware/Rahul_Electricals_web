@@ -302,6 +302,10 @@ a{
     align-items: center;
 }
 
+.description{
+    text-align: center;
+}
+
 .info > .center > div{
     display: flex;
     flex-direction: column;
@@ -753,7 +757,6 @@ a{
      }
      .features{
         padding: 1rem;
-        min-height: 60vh;
         gap: 1vh;
      }
      .features > .title{

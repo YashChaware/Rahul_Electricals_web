@@ -1,6 +1,6 @@
 var menu = document.getElementById("menu");
 var nav = document.getElementById("nav");
-if(window.innerWidth < 600){
+if(window.innerWidth <= 600){
     nav.style.display = "none"
 }else{
     nav.style.display = "flex";
@@ -30,6 +30,9 @@ window.addEventListener('resize',()=>{
 });
 
 document.addEventListener("scroll", (event) => {
-    menu.classList.remove("change");
-    nav.style.display = "none";
+   
+    if(window.innerWidth < 600){
+        menu.classList.remove("change");
+        nav.style.display = "none";
+    }
 });
