@@ -44,3 +44,9 @@ document.body.addEventListener("click", (event) => {
         nav.style.display = "none";
         }
 });
+
+document.getElementsByClassName("top")[0].addEventListener("click",(event)=>{
+    if(window.innerWidth <= 600){
+        window.location.href = "index.html";
+    }
+  })
