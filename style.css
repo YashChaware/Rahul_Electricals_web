@@ -16,8 +16,6 @@ body{
     display: flex;
     flex-direction: column;
     z-index: 2;
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 
 .orangespace{
@@ -39,6 +37,11 @@ body{
 
 .brand > .logo{
     flex: 2;
+}
+
+.top > .logo > img{
+    width: 100px;
+    height: 100px;
 }
 
 .brand{
@@ -646,6 +649,9 @@ a{
          flex: 1;
          justify-content: center;
      }
+     .right img{
+        width: 94%;
+     }
      .about-img {
         display: flex;
         justify-content: center;
@@ -693,8 +699,8 @@ a{
      }
  
     .header >.top.logo img {
-         max-width: 50px;
-         height:auto;
+         width: 66px;
+         height:66px;
      }
  
     .header >.top.brand {
@@ -706,21 +712,19 @@ a{
      }
  
     .header {
-         height:fit-content;
+         height:15vh;
          width: 100%;
          display: flex;
          flex-direction: column;
-         padding: 0 1rem;
-         justify-content: space-between;
      }
 
      .space{
-        height:22vh;
+        height:15vh;
     }
  
     .header .top {
         justify-content: center;
-         
+        height: 12vh;
      }
  
     .header.brand {
@@ -737,14 +741,28 @@ a{
          border-radius: 13px;
          padding: 1rem 0;
          gap: 8px;
-         top: 10rem;
+         top: 15vh;
          left: 8%;
          margin: auto;
          justify-content: center;
          background-color: #ffffff;
-         z-index: 5;
+         box-shadow: 2px 4px 16px grey;
+         animation: dropdown 0.5s;
      }
 
+     @keyframes dropdown {
+        0%{opacity: 0; top: 12vh;}
+        100%{opacity: 1; top: 15vh;}    
+     }
+
+     .change{
+        animation: opacity 1s;
+     }
+
+     @keyframes opacity {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+     }
  
     .header.nav a {
          padding: 0.5rem 1rem;
@@ -777,16 +795,17 @@ a{
      #menu{
         display: flex;
         flex-direction: column;
-        gap: 5px;
-        margin: 1rem;
-        z-index: 5;
+        gap: 4px;
+        margin-left: 1rem;
+        height: 3vh;
+        width: min-content;
      }
 
      #menu > div{
-        width: 1.4rem;
+        width: 1.3rem;
         border: 1px solid black;
         transition: 1s;
-        animation: 1s ease-in-out;
+        animation:1s ease-in-out;
      }
 
      .change .bar1{
@@ -834,4 +853,18 @@ a{
         width: 50%;
         font-size: large;
      }
+
+     .website{
+        font-size:0.8rem;
+     }
+     .footer-links{
+        font-size:0.8rem;
+     }
+
+     .top > .logo > img{
+        width: 50px;
+        height: 50px;
+    }
+
+    
  }
