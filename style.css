@@ -189,6 +189,24 @@ body{
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    ul {
+        list-style-type: none; /* Remove default bullets */
+        padding-left: 0; /* Remove default padding */
+        margin-left: 0; /* Remove default margin */
+    }
+    ul li {
+        position: relative; /* Create a positioning context */
+        padding-left: 20px; /* Space for custom bullet */
+    }
+    ul li::before {
+        content: "-"; /* Dash as bullet */
+        position: absolute; /* Position bullet */
+        left: 0; /* Align bullet to the left */
+    }
+    p {
+        margin: 0; /* Remove default margin from paragraphs */
+        padding: 0; /* Remove default padding from paragraphs */
+    }
 }
 
 .info > .left{
